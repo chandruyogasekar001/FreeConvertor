@@ -9,6 +9,11 @@ export default defineConfig({
     exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/util', 'scribe.js-ocr']
   },
 
+  // Bundle web workers as ES modules (fixes the "iife" build error)
+  worker: {
+    format: 'es'
+  },
+
   server: {
     headers: {
       // Required for WASM libs (ffmpeg, scribe.js-ocr)
@@ -32,4 +37,4 @@ export default defineConfig({
       }
     }
   }
-})
+}) git add .
