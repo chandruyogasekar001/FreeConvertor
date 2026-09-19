@@ -1,0 +1,152 @@
+.all-tools-page { padding-bottom: 80px; }
+
+.at-hero {
+  background: linear-gradient(180deg, var(--off-white) 0%, white 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 60px 0 48px;
+  text-align: center;
+}
+
+.at-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.at-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  color: var(--text);
+  margin-bottom: 14px;
+  line-height: 1.05;
+}
+
+.at-sub { font-size: 16px; color: var(--text2); margin-bottom: 28px; }
+
+.at-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 16px;
+  transition: border-color 0.2s;
+}
+
+.at-search:focus-within { border-color: var(--accent); }
+
+.at-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  background: transparent;
+}
+
+.at-search input::placeholder { color: var(--muted); }
+
+.at-search button {
+  background: var(--light);
+  border: none;
+  color: var(--muted);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.at-body { padding-top: 32px; }
+
+.at-cat-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 24px 0 28px;
+}
+
+.at-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.at-empty {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.at-empty div:first-child { font-size: 48px; margin-bottom: 16px; }
+.at-empty h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.at-empty p { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+.at-empty button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .at-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── CAT TABS (self-contained, not relying on Home.css) ── */
+.cat-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: white;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cat-tab:hover {
+  border-color: var(--border2);
+  color: var(--text);
+}
+
+.cat-tab.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: white;
+}
+
+.cat-count {
+  background: var(--light);
+  color: var(--muted);
+  border-radius: 100px;
+  padding: 1px 7px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.cat-tab.active .cat-count {
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+}
